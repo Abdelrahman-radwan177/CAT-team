@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteTaking App</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <header>
+        <h1>📝 NoteTaking App</h1>
+        <p>Your thoughts, organized and safe.</p>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <div class="form-toggle">
+                    <button id="login-toggle" class="active">Login</button>
+                    <button id="signup-toggle">Sign Up</button>
+                </div>
+                <form id="login-form" class="form">
+                    <input type="email" placeholder="Email" id="login-email" required>
+                    <input type="password" placeholder="Password" id="login-password" required>
+                    <button type="submit">Login</button>
+                </form>
+                <form id="signup-form" class="form hidden">
+                    <input type="text" placeholder="First Name" id="signup-firstname" required>
+                    <input type="text" placeholder="Last Name" id="signup-lastname" required>
+                    <input type="email" placeholder="Email" id="signup-email" required>
+                    <input type="password" placeholder="Password" id="signup-password" required>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>© 2023 NoteTaking App. All rights reserved.</p>
+    </footer>
+    <script src="home.js"></script>
+</body>
+</html>

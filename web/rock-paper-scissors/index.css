@@ -1,0 +1,144 @@
+/* Dark Theme Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  color: #e0e0e0;
+}
+
+header {
+  text-align: center;
+  margin: 20px 0;
+}
+
+h1 {
+  color: #bb86fc; /* Purple accent color */
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 8px rgba(187, 134, 252, 0.3);
+}
+
+main {
+  background-color: #1e1e1e;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: 1px solid #333;
+}
+
+/* Button styling */
+.imageBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #2d2d2d;
+}
+
+.imageBtn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(187, 134, 252, 0.4);
+  background-color: #3d3d3d;
+}
+
+.imageBtn img {
+  width: 80px;
+  height: 80px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.2));
+}
+
+/* Result and score styling */
+.result {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 20px 0;
+  color: #bb86fc; /* Purple accent color */
+}
+
+.choses {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin: 20px 0;
+  font-size: 1.2rem;
+}
+
+.choses img {
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.3));
+}
+
+.score {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #2d2d2d;
+  border-radius: 5px;
+  border: 1px solid #333;
+}
+
+/* Reset button styling */
+.resetBtn button {
+  background-color: #e91e63; /* Red accent color */
+  color: #f3efef;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: bold;
+}
+
+.resetBtn button:hover {
+  background-color: #e91e63;
+  box-shadow: 0 0 10px rgba(207, 102, 121, 0.5);
+}
+
+/* Win/Lose colors */
+.Win {
+  color: #4caf50;
+  text-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+.Lose {
+  color: #f44336;
+  text-shadow: 0 0 8px rgba(244, 67, 54, 0.3);
+}
+
+.Tie {
+  color: #ffc107;
+  text-shadow: 0 0 8px rgba(255, 193, 7, 0.3);
+}
+
+/* Responsive design */
+@media (max-width: 500px) {
+  .imageBtn img {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .choses {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+}
