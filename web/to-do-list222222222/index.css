@@ -1,0 +1,175 @@
+:root {
+  --primary-color: #4a6fa5;
+  --secondary-color: #166088;
+  --accent-color: #4fc3f7;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: var(--dark-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--secondary-color);
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+header h1 i {
+  margin-right: 10px;
+}
+
+.subtitle {
+  color: #6c757d;
+  font-size: 1.1rem;
+}
+
+.input-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.TodoName,
+.Tododate {
+  flex: 1;
+  min-width: 200px;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.TodoName:focus,
+.Tododate:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.addBtn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.addBtn:hover {
+  background-color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.todo-container {
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+}
+
+.empty {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+.todoItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.todoItem:last-child {
+  border-bottom: none;
+}
+
+.todoItem:hover {
+  background-color: #f8f9fa;
+}
+
+.oneToDoName {
+  flex: 2;
+  font-weight: 500;
+  word-break: break-word;
+}
+
+.oneToDoDate {
+  flex: 1;
+  color: #6c757d;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.deleteBtn {
+  background-color: var(--danger-color);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.deleteBtn:hover {
+  background-color: #b51828;
+  transform: translateY(-1.3px);
+  scale: 1.1;
+}
+
+@media (max-width: 600px) {
+  .input-container {
+    flex-direction: column;
+  }
+
+  .todoItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .oneToDoDate,
+  .deleteBtn {
+    align-self: flex-end;
+  }
+}
